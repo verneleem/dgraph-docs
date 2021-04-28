@@ -11,7 +11,7 @@ set -e
 
 # Important for clean builds on Netlify
 if ! git remote | grep -q origin ; then
-    git remote add origin https://github.com/dgraph-io/dgraph-docs.git
+    git remote add origin https://github.com/verneleem/dgraph-docs.git
     git fetch --all
 fi
 
@@ -140,7 +140,7 @@ while true; do
 	if [ "$firstRun" = 1 ];
 	then
 		# clone the hugo-docs theme if not already there
-		[ ! -d 'themes/hugo-docs' ] && git clone https://github.com/dgraph-io/hugo-docs themes/hugo-docs
+		[ ! -d 'themes/hugo-docs' ] && git clone https://github.com/verneleem/hugo-docs themes/hugo-docs
 	fi
 
 	# Lets check if the theme was updated.
